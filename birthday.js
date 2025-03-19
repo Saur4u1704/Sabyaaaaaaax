@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     backgroundMusic.play().catch((error) => {
       console.error('Autoplay failed:', error);
       // Fallback: Prompt the user to interact with the page
-      alert('Babu suno screen pr khi bhi click kro');
+      alert('Babu suno last time click kro');
     });
   });
 
