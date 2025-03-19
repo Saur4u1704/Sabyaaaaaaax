@@ -13,6 +13,16 @@ specialButton.addEventListener('click', () => {
 // Background Music
 const backgroundMusic = document.getElementById('backgroundMusic');
 
+document.addEventListener('DOMContentLoaded', () => {
+    // Unmute and play the audio
+    backgroundMusic.muted = false;
+    backgroundMusic.play().catch((error) => {
+      console.error('Autoplay failed:', error);
+      // Fallback: Prompt the user to interact with the page
+      alert('Babu suno screen pr khi bhi click kro');
+    });
+  });
+
 // Play music on user interaction
 document.addEventListener('click', () => {
   if (backgroundMusic.paused) {
