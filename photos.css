@@ -1,0 +1,203 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Animated Background */
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee, #f6d365);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+  z-index: -1;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 2s ease-in-out;
+  width: 90%;
+  max-width: 1200px;
+  height: 90vh; /* Fixed height for the container */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  grid-template-rows: repeat(4, 1fr); /* 4 rows */
+  gap: 10px; /* Space between images */
+  width: 100%;
+  height: 100%; /* Take up full height of the container */
+  overflow-y: auto; /* Enable vertical scrollbar */
+  padding: 10px; /* Add some padding */
+}
+
+.image-grid img {
+  width: 100%; /* Full width of the grid cell */
+  height: 200px; /* Fixed height for all images */
+  object-fit: contain; /* Ensure images fit within the dimensions without cropping */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+  opacity: 0; /* Start with hidden images */
+  transition: opacity 1s ease; /* Smooth fade-in effect */
+  background-color: #f0f0f0; /* Background color for images with transparent areas */
+}
+
+/* Next Icon */
+.next-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ff6f61;
+  color: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+  z-index: 2;
+}
+
+.next-icon:hover {
+  background-color: #ff4a3d;
+}
+
+.next-icon i {
+  font-size: 24px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Decorative Elements */
+.decorations {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Ensure clicks pass through */
+  z-index: 0;
+}
+
+.flower, .heart, .sprinkle {
+  position: absolute;
+  font-size: 24px;
+  animation: float 6s infinite ease-in-out;
+}
+
+.flower1 { top: 10%; left: 5%; animation-delay: 0s; }
+.flower2 { top: 20%; right: 10%; animation-delay: 2s; }
+.heart1 { top: 30%; left: 15%; animation-delay: 1s; }
+.heart2 { bottom: 20%; right: 5%; animation-delay: 3s; }
+.sprinkle1 { top: 40%; left: 20%; animation-delay: 0.5s; }
+.sprinkle2 { bottom: 10%; left: 10%; animation-delay: 1.5s; }
+
+/* Play Button */
+.play-icon {
+  position: fixed;
+  bottom: 80px; /* Adjust position as needed */
+  right: 20px;
+  background-color: #ff6f61;
+  color: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+  z-index: 2;
+}
+
+.play-icon:hover {
+  background-color: #ff4a3d;
+}
+
+.play-icon i {
+  font-size: 24px;
+}
+ /* Sprinkles Container */
+.sprinkles-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Ensure clicks pass through */
+  z-index: 1;
+}
+
+.sprinkle {
+  position: absolute;
+  font-size: 24px;
+  animation: float 5s infinite ease-in-out;
+  opacity: 0; /* Start with hidden sprinkles */
+}
+
+/* Sprinkle Positions and Delays */
+.sprinkle1 { top: -10%; left: 10%; animation-delay: 0s; }
+.sprinkle2 { top: -20%; left: 30%; animation-delay: 1s; }
+.sprinkle3 { top: -15%; left: 50%; animation-delay: 2s; }
+.sprinkle4 { top: -25%; left: 70%; animation-delay: 3s; }
+.sprinkle5 { top: -30%; left: 90%; animation-delay: 4s; }
+
+/* Sprinkle Animation */
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

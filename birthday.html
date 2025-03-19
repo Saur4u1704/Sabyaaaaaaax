@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday!</title>
+  <link rel="stylesheet" href="birthday.css">
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="background"></div>
+  <!-- Confetti Animation -->
+  <div class="confetti-container">
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+  </div>
+  <div class="container">
+    <h1 class="birthday-message">Happy Birthday <span id="name">Sabya</span>! 🎉</h1>
+    <p class="wish">Wishing you a day filled with love, laughter, and joy! 🎂🎈</p>
+    <button id="specialButton">Click for a Special Wish!</button>
+    <p id="specialMessage" class="hidden">You mean the world to me! ❤️</p>
+  </div>
+  <!-- Background Music -->
+  <audio id="backgroundMusic" loop>
+    <source src="assests/birthday-song.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <script src="birthday.js"></script>
+</body>
+</html>

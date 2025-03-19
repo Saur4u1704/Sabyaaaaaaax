@@ -1,0 +1,173 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* Animated Background */
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee, #f6d365);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    z-index: -1;
+  }
+  
+  @keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  .container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  /* Cake Animation */
+  .cake {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+  }
+  
+  .plate {
+    width: 200px;
+    height: 10px;
+    background: #ccc;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .layer {
+    width: 120px;
+    height: 40px;
+    background: #f4a460;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .layer-bottom {
+    bottom: 10px;
+  }
+  
+  .layer-middle {
+    bottom: 50px;
+    width: 100px;
+  }
+  
+  .layer-top {
+    bottom: 90px;
+    width: 80px;
+  }
+  
+  .icing {
+    width: 80px;
+    height: 10px;
+    background: #ff69b4;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .candle {
+    width: 10px;
+    height: 30px;
+    background: #fff;
+    position: absolute;
+    bottom: 110px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .flame {
+    width: 10px;
+    height: 20px;
+    background: #ff4500;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    position: absolute;
+    bottom: 140px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: flicker 1s infinite alternate;
+  }
+  
+  @keyframes flicker {
+    0% { transform: translateX(-50%) scale(1); }
+    100% { transform: translateX(-50%) scale(1.1); }
+  }
+  
+  .welcome-message {
+    font-size: 2rem;
+    color: #ff6f61;
+    animation: slideIn 1.5s ease-in-out;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    animation: fadeIn 3s ease-in-out;
+    align-items: center;
+  }
+  
+  input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #ff4a3d;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideIn {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+  
+  /* Success Transition */
+  @keyframes successTransition {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(1.5); opacity: 0; }
+  }

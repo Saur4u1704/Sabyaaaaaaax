@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photos</title>
+  <link rel="stylesheet" href="photos.css">
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="background"></div>
+  <!-- Decorative Elements -->
+  <div class="decorations">
+    <div class="flower flower1">🌸</div>
+    <div class="flower flower2">🌼</div>
+    <div class="heart heart1">❤️</div>
+    <div class="heart heart2">💖</div>
+    <div class="sprinkle sprinkle1">✨</div>
+    <div class="sprinkle sprinkle2">🎉</div>
+  </div>
+  <div class="sprinkles-container">
+    <div class="sprinkle sprinkle1">✨</div>
+    <div class="sprinkle sprinkle2">🎉</div>
+    <div class="sprinkle sprinkle3">🌟</div>
+    <div class="sprinkle sprinkle4">💫</div>
+    <div class="sprinkle sprinkle5">🎊</div>
+  </div>
+  <div class="container">
+    <div class="image-grid" id="imageGrid">
+      <!-- Images will be added dynamically by JavaScript -->
+    </div>
+    <div id="nextButton" class="next-icon hidden">
+      <i class="fas fa-arrow-right"></i> <!-- Font Awesome arrow icon -->
+    </div>
+  </div>
+  <!-- Background Music -->
+  <audio id="backgroundMusic" loop muted>
+    <source src="assests/images/Blue-Yung-Kai.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <script src="photos.js"></script>
+</body>
+</html>
