@@ -13,6 +13,7 @@ const messages = [
   "In real life utna hi introvert hu. Aur hum kbhi itne mile bhii nhiii hai means itni samne sai baatein nhi kri haiii..",
   "Aur yeh mai esliye itna likhra hu ki like i never ever want to lose you in my life..",
   "Vrna dost to hazaar hai pr hazaar mai tu ek hai ❤️💕",
+  "Vese apni ek bhi sath mai koi pics nhi hai but we have memories jo pics sai kuch jayda haiii..",
   "Aur mai kaafi glad feel krta hu ki you are my friend babu lol",
   "jbse college end hua hai tbse apna intraction bhi kam hogya hai",
   "Like tu bhi busy sb busy hogye hai",
